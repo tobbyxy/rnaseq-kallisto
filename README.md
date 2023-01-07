@@ -42,3 +42,8 @@ following files under `pipeline-output/genomes/mm10_ensembl98`:
 
  - ftp://ftp.ensembl.org/pub/release-98/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
  - ftp://ftp.ensembl.org/pub/release-98/gtf/mus_musculus/Mus_musculus.GRCm38.98.gtf.gz
+
+
+## Normalization
+To obtain FPKM values (fragments per kilobase of exon per million fragments mapping), you will need to convert the counts to RPKM (reads per kilobase of exon per million reads).
+samtools view -c -F 4 <BAM file>
