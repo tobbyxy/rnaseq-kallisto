@@ -1,0 +1,10 @@
+name: rnaseq-kallisto
+channels:
+- conda-forge
+- bioconda
+dependencies:
+- multiqc==1.12
+- sra-tools
+- fastqc
+- trimmomatic
+- kallisto
