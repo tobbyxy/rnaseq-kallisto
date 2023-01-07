@@ -5,6 +5,8 @@
 
 This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact our [helpdesk](MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting assistance is needed.
 
+This pipeline processes RNA seq data using kallisto for mapping
+
 ## Features
 
  - built with [kallisto](https://github.com/pachterlab/kallisto), [MultiQC](https://multiqc.info/), [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
