@@ -1,16 +1,17 @@
 # rnaseq-kallisto
-# Pavlidis Lab RNA-seq pipeline repository
 
-[![Python Package using Conda](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml)
+This pipeline performs the following task
+processes RNA seq data using kallisto for mapping
 
-This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact our [helpdesk](MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting assistance is needed.
+- perform quality control on FastQ files using [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- view quality of reads using [MultiQC](https://multiqc.info/)
+- align reads of each sample in a run against reference genome (using [kallisto](https://github.com/pachterlab/kallisto)) 
+- count reads in features (using HTSeq-count)
+- normalize read counts (using DESeq)
+- calculate RPKMs (using edgeR)
+- perform DE analysis for standard designs (using DESeq2)
+- variant calling, filtering and annotation
 
-This pipeline processes RNA seq data using kallisto for mapping
-
-## Features
-
- - built with [kallisto](https://github.com/pachterlab/kallisto), [MultiQC](https://multiqc.info/), [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
- - produces count and FPKM matrices suitable for analysis with R and Python
  
  ## Downloading and installing
 
