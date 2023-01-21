@@ -33,15 +33,14 @@ conda activate rnaseq-kallisto
 ## Setting up a genomic reference
 
 
-The pipeline automatically generate the RSEM/STAR index and all that is
-required is to drop the GTF annotations file and the primary assembly FASTA
-files under `pipeline-output/genome/<reference_id>` subdirectory.
+This tutorial uses a human reference from Ensembl, you can download by heading to
+  - https://ftp.ensembl.org/pub/release-108/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
 
-For example, you can setup a mouse reference from Ensembl by downloading the
-following files under `pipeline-output/genomes/mm10_ensembl98`:
+To build index run the kallisto script or run
 
- - ftp://ftp.ensembl.org/pub/release-98/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
- - ftp://ftp.ensembl.org/pub/release-98/gtf/mus_musculus/Mus_musculus.GRCm38.98.gtf.gz
+```bash
+kallisto index -i Homo_sapiens.GRCh38.cdna.all.index Homo_sapiens.GRCh38.cdna.all.fa 
+```
 
 
 ## Normalization
